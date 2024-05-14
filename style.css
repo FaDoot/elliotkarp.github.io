@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(229, 160, 82);
+}
+pre{
+    font-size : 10px; 
+    font-weight: bold;
+}
+.links{
+    border: 2px white;
+    float: left;
+    padding: 10px;
+    font-size : 1.8em;
+    color : black;
+}.links a { 
+    color: inherit; 
+}
+
