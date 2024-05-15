@@ -19,6 +19,6 @@ pre{
     font-size : 2em;
 }
 .responsive-text {
-    font-size: calc(2px + .5vw);
+    font-size: calc(2px + .6vw);
 }
 
