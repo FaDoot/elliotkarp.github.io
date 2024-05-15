@@ -2,8 +2,8 @@ body{
     background-color: rgb(229, 160, 82);
 }
 pre{
-    font-size : 10px; 
-    font-weight: bold;
+    font-size : 1em; 
+   
 }
 .links{
     border: 2px white;
@@ -13,5 +13,12 @@ pre{
     color : black;
 }.links a { 
     color: inherit; 
+
+}
+.links:hover{
+    font-size : 2em;
+}
+.responsive-text {
+    font-size: calc(2px + .5vw);
 }
 
