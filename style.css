@@ -3,22 +3,73 @@ body{
 }
 pre{
     font-size : 1em; 
+    color: rgba(0, 0, 0, 0.355); 
    
+}
+strong {
+    font-weight: bold;
+    color: rgb(2, 6, 120); /* Temporarily set the color to red to see changes clearly */
 }
 .links{
     border: 2px white;
     float: left;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
     font-size : 1.8em;
     color : black;
-}.links a { 
-    color: inherit; 
+    transition: font-size 0.3s ease;
 
+}.links a { 
+    color: black; 
 }
 .links:hover{
-    font-size : 2em;
+    transform: scale(1.1); 
+    transform-origin: center;
 }
 .responsive-text {
-    font-size: calc(2px + .6vw);
+    font-size: calc(.2px + .8vw);
 }
+
+.link-container {
+    display: block;  /* Ensures it behaves as a block-level container */
+    margin-bottom: 20px; /* Adds space between the links and the dropdown */
+}
+
+
+
+.dropdown {
+    clear: both; /* Ensures no floating elements on either side will affect this */
+    width : 100%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;  
+
+}
+
+.dropdown .content {
+    display: block;
+    padding: 12px;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+
+}
+
+.dropdown .content.active {
+    max-height: 120px;
+    opacity: 1;
+}
+
+.dropdown .content p{
+    width: 300px;
+    background-color: transparent;
+}
+.dropbtn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
 
