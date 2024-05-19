@@ -37,3 +37,10 @@ function dropdwn(){
 };
 dropdwn();
 
+const currentVersion = '1.2';  // Update this with every major update
+const cachedVersion = localStorage.getItem('cachedVersion');
+
+if (cachedVersion !== currentVersion) {
+  localStorage.setItem('cachedVersion', currentVersion);
+  location.reload(true);  // Force reload of the page from the server
+}

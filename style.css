@@ -27,7 +27,7 @@ strong {
     transform-origin: center;
 }
 .responsive-text {
-    font-size: calc(.2px + .8vw);
+    font-size: calc(.85px + .8vw);
 }
 
 .link-container {
