@@ -39,7 +39,7 @@ dropdwn();
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const currentVersion = '1.2';  // Update this with every major update
+  const currentVersion = '1.3';  // Update this with every major update
   const cachedVersion = localStorage.getItem('cachedVersion');
 
   if (cachedVersion !== currentVersion) {
