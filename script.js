@@ -39,7 +39,7 @@ dropdwn();
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const currentVersion = '1.3';  // Update this with every major update
+  const currentVersion = '1.4';  // Update this with every major update
   const cachedVersion = localStorage.getItem('cachedVersion');
 
   if (cachedVersion !== currentVersion) {
@@ -48,3 +48,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const toggleDarkMode = document.getElementById('darkModeToggle');
+    let isDarkMode = true;
+
+    toggleDarkMode.addEventListener('click',() =>{
+        const root = document.documentElement;
+        if(isDarkMode){
+
+            console.log('set to ligt');
+
+            root.style.setProperty('--background-color', '#F3F0CA');
+            root.style.setProperty('--text-color', '#153448');
+            root.style.setProperty('--header-color', '#153448');
+            toggleDarkMode.innerHTML = "Set To Dark Theme";
+            
+
+        }
+
+        else{
+            console.log('set to dark');
+            root.style.setProperty('--background-color', '#153448');
+            root.style.setProperty('--text-color', '#F3F0CA');
+            root.style.setProperty('--header-color', '#F6995C');
+            toggleDarkMode.innerHTML = "Set To Light Theme";
+         
+        }
+        isDarkMode = !isDarkMode;
+
+    });
+});

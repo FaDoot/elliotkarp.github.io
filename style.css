@@ -1,26 +1,41 @@
-body{
-    background-color: rgb(229, 160, 82);
+
+:root {
+    --background-color: #153448;
+    --text-color: #F3F0CA;
+    --header-color: #F6995C;
 }
+
+html, body{
+    background-color:  var(--background-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+
+}
+
 pre{
     font-size : 1em; 
-    color: rgba(0, 0, 0, 0.355); 
-   
+    color: rgba(0, 0, 0, 0.167); 
+    transform: translateX(1%);
 }
 strong {
     font-weight: bold;
-    color: rgb(2, 6, 120); /* Temporarily set the color to red to see changes clearly */
+    color: var(--header-color);
+    
 }
 .links{
-    border: 2px white;
+    border: 2px;
     float: left;
     padding: 20px;
     margin-bottom: 10px;
     font-size : 1.8em;
-    color : black;
+    color : var(--text-color);
     transition: font-size 0.3s ease;
 
 }.links a { 
-    color: black; 
+    color : var(--header-color)
 }
 .links:hover{
     transform: scale(1.1); 
@@ -42,15 +57,14 @@ strong {
     width : 100%;
     margin-bottom: 20px;
     position: relative;
-    z-index: 10;  
-
+    transform: translateX(2%);
 }
 
 .dropdown .content {
     display: block;
     padding: 12px;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     max-height: 0;
+    transition: max-height 0.3s ease-in-out, opacity .4s ease-in-out;
     opacity: 0;
 
 }
@@ -63,13 +77,36 @@ strong {
 .dropdown .content p{
     width: 300px;
     background-color: transparent;
+    color: var(--text-color);
 }
 .dropbtn {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: var(--header-color);
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
+footer p{
+    color: var(--header-color);
+    text-align: center;
+    width: 100%;
+    
+}
+footer {
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(30%);
+}
+#darkModeToggle{
+    background-color: transparent;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-150%);
+}
+
+
 
 
